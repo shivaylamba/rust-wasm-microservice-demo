@@ -1,18 +1,19 @@
 [package]
 name = "json-dataframe"
 version = "0.1.0"
+authors = ["Shivay Lamba <shivaylamba@gmail.com>"]
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+[lib]
+crate-type = ['cdylib']
 
 [dependencies]
 fluvio-smartmodule = "0.3.1"
 serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 
+
 [profile.release-lto]
 inherits = "release"
 lto = true
 strip = "symbols"
-
-
