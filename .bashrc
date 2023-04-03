@@ -1,1 +1,0 @@
-export PATH="${HOME}/.fluvio/bin:${PATH}"
